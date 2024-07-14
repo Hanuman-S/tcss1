@@ -14,112 +14,130 @@
     <link rel="shortcut icon" href="img/rocket-solid.svg" type="image/x-icon">
     <title>Acme Rockets</title>
 </head>
-<body class="min-h-screen flex flex-col flex-nowrap bg-black">
-    <header class="flex flex-row flex-nowrap justify-around sticky top-0 bg-teal-500 text-white items-center z-20">
-        <section class="title text-2xl">
-            <h1><a href="#" class="block h-full w-full"><i class="fa-solid fa-rocket"></i> Acme Rockets</a></h1>
+<body class="min-h-screen flex flex-col flex-nowrap dark:bg-black bg-white">
+    <header class="flex flex-col flex-nowrap justify-around sticky top-0 bg-teal-600 text-white items-center z-20">
+        <section class="desktop-header flex flex-row flex-nowrap justify-around sticky top-0 bg-teal-600 text-white items-center z-20 w-full">
+            <section class="title text-2xl">
+                <h1><a href="#" class="block h-full w-full m-2"><i class="fa-solid fa-rocket"></i><span class="max-[580px]:hidden"> Acme Rockets</span></a></h1>
+            </section>
+            <section class="nav flex flex-row flex-nowrap justify-between max-[580px]:invisible">
+                <section class="our-rockets"><h2><a href="#rocket" class="w-full hover:bg-teal-700 p-4 text-lg whitespace-nowrap block">Our Rockets</a></h2></section>
+                <section class="testimonials"><h2><a href="#testimonial" class="w-full hover:bg-teal-700 block p-4 text-lg">Testimonials</a></h2></section>
+                <section class="contact"><h2><a href="#contact" class="w-full hover:bg-teal-700 block p-4 text-lg">Contact Us</a></h2></section>
+            </section>
         </section>
-        <section class="nav flex flex-row flex-nowrap gap-12">
-            <section class="our-rockets"><h2><a href="#rocket" class="w-full hover:shadow-md block p-4 text-lg whitespace-nowrap">Our Rockets</a></h2></section>
-            <section class="testimonials"><h2><a href="#testimonial" class="w-full hover:shadow-md block p-4 text-lg">Testimonials</a></h2></section>
-            <section class="contact"><h2><a href="#contact" class="w-full hover:shadow-md block p-4 text-lg">Contact Us</a></h2></section>
+        <section class="mobile-header w-full">
+            <button class="burger fixed right-4 top-1.5 w-12 h-12 flex justify-center items-center min-[580px]:hidden z-50">
+                <div class="button_icon" id="button_icon"></div>
+            </button>
+            <section class="hidden-nav hidden flex-col w-full" id="hidden-nav">
+                <section class="our-rockets"><h2><a href="#rocket" class="w-full hover:bg-teal-700 px-4 py-3 text-3xl whitespace-nowrap block text-center">Our Rockets</a></h2></section>
+                <section class="testimonials"><h2><a href="#testimonial" class="w-full hover:bg-teal-700 block px-4 py-3 text-3xl text-center">Testimonials</a></h2></section>
+                <section class="contact"><h2><a href="#contact" class="w-full hover:bg-teal-700 block px-4 py-3 text-3xl text-center">Contact Us</a></h2></section>
+            </section>
         </section>
     </header>
     <main class="flex-grow flex flex-col flex-nowrap justify-around">
-        <section class="about flex flex-row justify-center items-center h-screen">
-            <section class="text w-1/3 m-4"><h2 class="text-white text-5xl font-bold m-4">We Boldly Go <br> <section class="text-purple-300"> Where No Rocket</section> Has Gone <br> Before...</h2><p class="text-gray-500 text-xl m-4">We're building rockets for the next century today. From the Moon to Mars, Jupiter and Beyond</p><p class="text-gray-500 text-xl m-4">Think Acme Rockets</p></section>
-            <section class="rocketdab"><figure><img src="img/rocketdab.png" alt="rocketdab" height="400" width="400"></figure></section>
+        <section class="about flex max-[800px]:flex-col-reverse justify-center items-center h-screen flex-row">
+            <section class="max-[800px]:text-center w-1/3 m-4 max-[800px]:w-4/5"><h2 class="dark:text-white text-black text-5xl font-bold m-4 max-[800px]:text-3xl">We Boldly Go <br> <section class="dark:text-purple-300 text-purple-500"> Where No Rocket</section> Has Gone <br> Before...</h2><p class="text-gray-500 text-xl m-4 max-[490px]:hidden max-[800px]:text-base">We're building rockets for the next century today. From the Moon to Mars, Jupiter and Beyond</p><p class="text-gray-500 text-xl m-4 max-[800px]:text-base">Think Acme Rockets</p></section>
+            <section class="rocketdab"><figure class="max-[530px]:w-4/5 max-[530px]:translate-x-8 max-[530px]:translate-y-2"><img src="img/rocketdab.png" alt="rocketdab" height="400" width="400"></figure></section>
         </section>
-        <section id="rocket" class="h-screen flex flex-col justify-center items-center">
-            <h2 class="text-4xl text-white font-bold">Our Rockets</h2>
-            <section class="items flex flex-row w-1/2 gap-x-4 my-12 flex-nowrap">
+        <section id="rocket" class="h-screen flex flex-col justify-center items-center mt-32">
+            <h2 class="text-4xl dark:text-white text-black font-bold">Our Rockets</h2>
+            <section class="items flex flex-row gap-x-4 my-12 flex-wrap gap-y-4 justify-center">
                 <section class="explorer">
-                    <a href="" class="text-center h-60 flex justify-center items-start border border-white border-solid rounded-xl hover:bg-slate-800 hover:shadow-white hover:shadow-md">
-                        <figure class="w-1/2 h-1/2">
+                    <a href="" class="text-center min-h-60 min-w-60 flex justify-center items-start border dark:border-white border-black border-solid rounded-xl dark:hover:bg-slate-800 hover:bg-slate-100 dark:hover:shadow-white hover:shadow-black hover:shadow-md">
+                        <figure class="max-w-28 max-h-28">
                             <img src="img/explorer.png" alt="explorer" height="400" width="400" class="my-6">
-                            <figcaption class="text-white text-2xl">Explorer <br> <p class="text-gray-500">$</p></figcaption>
+                            <figcaption class="dark:text-white text-black text-2xl">Explorer<br><p class="text-gray-500">$</p></figcaption>
                         </figure>
                     </a>
                 </section>
                 <section class="adventurer">
-                    <a href="" class="text-center h-60 flex justify-center items-start border border-white border-solid rounded-xl hover:bg-slate-800 hover:shadow-white hover:shadow-md">
-                        <figure class="w-1/2 h-1/2">
+                    <a href="" class="text-center min-h-60 min-w-60 flex justify-center items-start border dark:border-white border-black border-solid rounded-xl dark:hover:bg-slate-800 hover:bg-slate-100 dark:hover:shadow-white hover:shadow-black hover:shadow-md">
+                        <figure class="max-w-28 max-h-28">
                             <img src="img/adventurer.png" alt="adventurer" height="400" width="400" class="my-6">
-                            <figcaption class="text-white text-2xl">Adventurer <br> <p class="text-gray-500">$$</p></figcaption>
+                            <figcaption class="dark:text-white text-black text-2xl">Adventurer<br><p class="text-gray-500">$$</p></figcaption>
                         </figure>
                     </a>
                 </section>
                 <section class="infinity">
-                    <a href="" class="text-center h-60 flex justify-center items-start border border-white border-solid rounded-xl hover:bg-slate-800 hover:shadow-white hover:shadow-md">
-                        <figure class="w-1/2 h-1/2">
+                    <a href="" class="text-center min-h-60 min-w-60 flex justify-center items-start border dark:border-white border-black border-solid rounded-xl dark:hover:bg-slate-800 hover:bg-slate-100 dark:hover:shadow-white hover:shadow-black hover:shadow-md">
+                        <figure class="max-w-28 max-h-28">
                             <img src="img/infinity.png" alt="infinity" height="400" width="400" class="my-6">
-                            <figcaption class="text-white text-2xl">Infinity <br> <p class="text-gray-500">$$$</p></figcaption>
+                            <figcaption class="dark:text-white text-black text-2xl">Infinity<br><p class="text-gray-500">$$$</p></figcaption>
                         </figure>
                     </a>
                 </section>
             </section>
         </section>
-        <section id="testimonial" class="min-h-screen flex flex-col justify-center items-center scroll-m-12">
-            <h2 class="text-white text-4xl font-bold m-8">Testimonials</h2>
-            <section class="testimonies flex-col flex gap-y-16 w-1/2 z-10">
+        <section id="testimonial" class="min-h-screen flex flex-col justify-center items-center scroll-m-12 mt-32">
+            <h2 class="dark:text-white text-black text-4xl font-bold m-8">Testimonials</h2>
+            <section class="testimonies flex-col flex gap-y-16 width-func z-10">
                 <section>
-                    <p class="text-gray-500 text-3xl w-full text-left">
-                        <i class="fa-solid fa-quote-left text-left -translate-x-8"></i>
-                    </p>
-                    <p class="text-gray-500 text-3xl w-full text-center">
-                        Acme has always been there for me. Their explore rocket arrived in a wooden crate as expected. Life-long customer! A++ shopping experience. 
-                    </p>
-                    <p class="text-gray-500 text-3xl w-full text-right">
-                        <i class="fa-solid fa-quote-right text-right translate-x-8"></i>
-                    </p>
+                    <section class="dark:rounded-none dark:bg-transparent bg-teal-600 rounded-xl px-10 py-1">
+                        <p class="dark:text-gray-500 text-white text-3xl w-full text-left  max-[500px]:text-xl">
+                            <i class="fa-solid fa-quote-left text-left -translate-x-8 "></i>
+                        </p>
+                        <p class="dark:text-gray-500 text-white text-3xl w-full text-center max-[500px]:text-xl">
+                            Acme has always been there for me. Their explore rocket arrived in a wooden crate as expected. Life-long customer! A++ shopping experience. 
+                        </p>
+                        <p class="dark:text-gray-500 text-white text-3xl w-full text-right  max-[500px]:text-xl">
+                            <i class="fa-solid fa-quote-right text-right translate-x-8"></i>
+                        </p>
+                    </section>
                     <p class="text-gray-500 italic font-light text-right">&mdash;Wild E. Coyote, Genius</p>
                 </section>
                 <section>
-                    <p class="text-gray-500 text-3xl w-full text-left">
-                        <i class="fa-solid fa-quote-left text-left -translate-x-8"></i>
-                    </p>
-                    <p class="text-gray-500 text-3xl w-full text-center">
-                        The Acme adventurer rocket has thwarted my illudium Q-36 Explosive Space Modular on several occasions. <span class="italic">This makes me very, very angry!</span> Nevertheless, K-9 and I have awarded Acme the Martian contract for space exploration rockets based on Acme's quality and sturdy designs. 
-                    </p>
-                    <p class="text-gray-500 text-3xl w-full text-right">
-                        <i class="fa-solid fa-quote-right text-right translate-x-8"></i>
-                    </p>
+                    <section class="dark:rounded-none dark:bg-transparent bg-teal-600 rounded-xl px-10 py-1">
+                        <p class="dark:text-gray-500 text-white text-3xl w-full text-left  max-[500px]:text-xl">
+                            <i class="fa-solid fa-quote-left text-left -translate-x-8"></i>
+                        </p>
+                        <p class="dark:text-gray-500 text-white text-3xl w-full text-center  max-[500px]:text-xl">
+                            The Acme adventurer rocket has thwarted my illudium Q-36 Explosive Space Modular on several occasions. <span class="italic">This makes me very, very angry!</span> Nevertheless, K-9 and I have awarded Acme the Martian contract for space exploration rockets based on Acme's quality and sturdy designs. 
+                        </p>
+                        <p class="dark:text-gray-500 text-white text-3xl w-full text-right  max-[500px]:text-xl">
+                            <i class="fa-solid fa-quote-right text-right translate-x-8"></i>
+                        </p>
+                    </section>
                     <p class="text-gray-500 italic font-light text-right">&mdash;Marvin The Martian & K-9</p>
                 </section>
                 <section>
-                    <p class="text-gray-500 text-3xl w-full text-left">
-                        <i class="fa-solid fa-quote-left text-left -translate-x-8"></i>
-                    </p>
-                    <p class="text-gray-500 text-3xl w-full text-center">
-                        I knew I not only wanted &mdash; <span class="italic">I needed</span> &mdash; Acme's Infinity Rocket for my mission in space. Acme delivered in one day. Nothing says <span class="italic">"Take me to your leader"</span> like Acme's Infinity Rocket! 💯
-                    </p>
-                    <p class="text-gray-500 text-3xl w-full text-right">
-                        <i class="fa-solid fa-quote-right text-right translate-x-8"></i>
-                    </p>
+                    <section class="dark:rounded-none dark:bg-transparent bg-teal-600 rounded-xl px-10 py-1">
+                        <p class="dark:text-gray-500 text-white text-3xl w-full text-left  max-[500px]:text-xl">
+                            <i class="fa-solid fa-quote-left text-left -translate-x-8"></i>
+                        </p>
+                        <p class="dark:text-gray-500 text-white text-3xl w-full text-center  max-[500px]:text-xl">
+                            I knew I not only wanted &mdash; <span class="italic">I needed</span> &mdash; Acme's Infinity Rocket for my mission in space. Acme delivered in one day. Nothing says <span class="italic">"Take me to your leader"</span> like Acme's Infinity Rocket! 💯
+                        </p>
+                        <p class="dark:text-gray-500 text-white text-3xl w-full text-right max-[500px]:text-xl">
+                            <i class="fa-solid fa-quote-right text-right translate-x-8"></i>
+                        </p>
+                    </section>
                     <p class="text-gray-500 italic font-light text-right">&mdash;Buzz Lightyear</p>
                 </section>
             </section>
         </section>
         <section id="contact" class="min-h-screen flex flex-col justify-center items-center">
-            <h2 class="text-white font-bold text-4xl">Contact Us</h2>
-            <section class="w-3/5">
+            <h2 class="dark:text-white  text-black font-bold text-4xl">Contact Us</h2>
+            <section class="width-func">
                 <form action="https://httpbin.org/get" method="get">
                     <section class="subject flex flex-col m-2">
-                        <label for="subject" class="text-white text-xl m-2" >Subject : </label>
-                        <input type="text" name="subject" id="subject" placeholder="Your Subject" required class="rounded-md p-2 text-lg m-2">
+                        <label for="subject" class="dark:text-white text-black text-xl m-2 max-[500px]:text-base" >Subject : </label>
+                        <input type="text" name="subject" id="subject" placeholder="Your Subject" required class="rounded-md p-2 text-lg m-2 border dark:border-none border-black max-[500px]:text-base">
                     </section>
                     <section class="message flex flex-col m-2">
-                        <label for="message" class="text-white text-xl m-2">Message : </label>
-                        <textarea required name="message" id="message" placeholder="Your Message" class="rounded-md p-2 text-lg h-40 m-2"></textarea>
+                        <label for="message" class="dark:text-white text-black text-xl m-2 max-[500px]:text-base">Message : </label>
+                        <textarea required name="message" id="message" placeholder="Your Message" class="rounded-md p-2 text-lg h-40 m-2 border dark:border-none border-black border-1 max-[500px]:text-base"></textarea>
                     </section>
                     <section class="button">
-                        <button type="submit" class="rounded-md bg-teal-500 text-white hover:bg-teal-600 active:bg-teal-700 text-xl py-2 px-3 m-4">Submit</button>
+                        <button type="submit" class="rounded-md bg-teal-500 text-white hover:bg-teal-600 active:bg-teal-700 text-xl py-2 px-3 m-4 max-[500px]:text-base">Submit</button>
                     </section>
                 </form>
             </section>
         </section>
     </main>
-    <footer class="bg-teal-500 flex flex-row text-white justify-around">
+    <footer class="bg-teal-600 flex flex-row text-white justify-around">
         <section class="info italic flex flex-col p-4">
             <address>Acme Rocket-Powered Products, Inc. <br> 555 Astro Way <br> Fairfield, New Jersey 1245-5555</address>
             <a href="mailto:Inquires@AcmeRockets.com" class="block">Email : Inquires@AcmeRockets.com</a>
@@ -134,5 +152,6 @@
             <p>Copyright &copy; 2024 <br> <br> All Rights Reserved</p>
         </section>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>

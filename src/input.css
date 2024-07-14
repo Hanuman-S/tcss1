@@ -11,3 +11,47 @@
       src: url(/fonts/Roboto.woff2) format('woff2');
     }
   }
+
+.width-func{
+    width:max(23.3rem,60%);
+}
+
+.button_icon,.button_icon::after,.button_icon::before{
+    background-color: white;
+    width:2.5rem;
+    height:0.25rem;
+    border-radius: 0.5rem;
+    position:absolute;
+    transition: all 0.3s;
+}
+
+.button_icon::after,.button_icon::before{
+    content: '';
+}
+
+.button_icon::before{
+    transform: translate(-20px,-12px);
+}
+
+.button_icon::after{
+    transform: translate(-20px,12px);
+}
+
+:is(button:hover, button:focus-within) .button_icon{
+    background-color: transparent;
+}
+:is(button:hover, button:focus-within) .button_icon::before{
+    transform: translateX(-20px) rotate(45deg);
+}
+:is(button:hover, button:focus-within) .button_icon::after{
+    transform: translateX(-20px) rotate(-45deg);
+}
+
+@keyframes dropdownAnimation {
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
